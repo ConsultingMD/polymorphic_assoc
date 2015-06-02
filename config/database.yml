@@ -1,0 +1,17 @@
+common: &common
+  adapter: mysql2
+  username: root
+  min_messages: WARNING
+  pool: 5
+
+development:
+  <<: *common
+  database: poly-dev
+
+test:
+  <<: *common
+  database: poly-test
+
+production:
+  <<: *common
+  database: poly-prod
